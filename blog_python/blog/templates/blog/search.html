@@ -1,0 +1,31 @@
+{% extends "blog/base.html" %}
+
+{% load static %}
+
+{% block title %}Blogs{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style_search1.css' %}" >
+
+
+<div id = "home" class="jumbotron-fluid">
+            <div class="row" id = test>
+
+              <div id = "coloumn1" class="col-md-6 sm-12 offset-1">
+                <h2 id = "search_result" class = "offset-3">Search Results for '{{search}}'</h2><br/>
+                {% for blog in blogs %}
+                <a href="{% url 'blogs' blog.id %}"><img class = "img-fluid"  id="image" src="{{blog.thumbURL}}"></a>
+                <p class = "mt-4"><a href="{% url 'author_blogs' blog.author.name %}"><img class = "rounded"  id="profile_main" src="{{blog.author.profileURL}}"></a><a href="{% url 'author_blogs' blog.author.name %}"><span id = "name_main">{{blog.author.name}}</span></a></p>
+                <a href="{% url 'blogs' blog.id %}"><p class = "mt-3" id = "title">{{blog.title.upper}}</p></a>
+                <a href="{% url 'blogs' blog.id %}"><p class = "mt-3" id = "sub_title">{{blog.overview}}</p></a>
+                <a href="{% url 'blogs' blog.id %}"><p id = "read_more">Read More</p></a>
+                {% endfor %}
+              </div>
+
+          </div>
+          <br/><br/>
+          <hr/>
+
+
+
+{% endblock %}

@@ -1,0 +1,203 @@
+body{
+  /* background-color: red; */
+  font-size: 15px;
+  font-family: Trebuchet MS;
+}
+
+#home{
+  margin-top: 150px;
+}
+#image{
+  margin-left:17%;
+  width:70%;
+  height:300px;
+}
+
+#image1{
+  /* margin-left:10%; */
+  width:90%;
+  height:140px;
+}
+
+#category,#title,#sub_title,#read_more,#date{
+  margin-left:17%;
+  margin-right: 15%;
+  color : black;
+  /* font-size: 17px; */
+}
+
+#title{
+  font-size: 18px;
+  font-weight: bolder;
+  color:#43494F;
+}
+
+#sub_title{
+  font-size: 17px;
+  color:#43494F;
+}
+
+#title1{
+  color:#43494F;
+  font-size: 18px;
+  font-weight: bolder;
+  /* font-family: Helvetica; */
+}
+
+#category1,#name{
+  color:#43494F;
+}
+
+#name{
+  color:#43494F;
+  margin-left: 3%;
+}
+
+#profile_pic{
+  width:10%;
+  height:30px;
+}
+
+#read_more{
+  color:gray;
+}
+
+#profile_main{
+  margin-left:17%;
+  width:5%;
+  height:30px;
+  text-decoration: none;
+}
+
+#name_main{
+  margin-left: 2%;
+  color:#43494F;
+}
+
+#latest{
+  text-align: center;
+  align-items: center;
+  /* margin-left: 9%; */
+  margin-top: 40px;
+  font-size: 17px;
+  font-weight: bolder;
+}
+
+#category_latest,#title_latest,#sub_title_latest{
+  margin-left:17%;
+  margin-right: 10%;
+  color : #43494F;
+  font-family: "Trebuchet MS";
+  /* font-size: 17px; */
+}
+
+#title_latest{
+  color:#43494F;
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+#category_latest{
+  color: #43494F;
+}
+
+#main1,#main2{
+  margin-left: 10%;
+  margin-top: 20px;
+}
+
+#pagination{
+  text-align: center;
+}
+
+#sub_coloumn1,#sub_coloumn2{
+  margin-top:30px;
+}
+
+#coloumn2{
+  margin-top: -30px;
+}
+
+#name_pagination{
+  color:#43494F;
+  margin-left: 3%;
+}
+
+#profile_pic_pagination{
+  width:10%;
+  height:30px;
+}
+
+#category_pagination{
+  color:#43494F;
+}
+
+#title_pagination{
+  color:#43494F;
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+  #profile_pic,#title1,#name,#category1{
+    margin-left:15%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #read_more{
+    padding-bottom: 20px;
+    /* border-bottom: 2px solid lightgrey;
+    width:80%; */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #latest1,#latest2,#latest3{
+    margin-left:0%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #date{
+    display:none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #category,#title,#sub_title,#read_more,#date,#profile_main,#name_main,#image,
+  #title_latest,#sub_title_latest{
+    margin-left: 10%;
+    margin-right: 2%;
+  }
+
+  @media only screen and (max-width: 768px) {
+  #image_pagination{
+      padding-right: 10%;
+    }

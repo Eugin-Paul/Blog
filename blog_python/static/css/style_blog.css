@@ -1,0 +1,159 @@
+body{
+  /* background-color: blue; */
+}
+
+#skills{
+  margin-bottom: 0px;
+}
+
+#row{
+  /* margin-right: 20%; */
+}
+
+#profile{
+  width:8%;
+  height:50px;
+}
+
+#title{
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#name_category{
+  margin-left: 10%;
+  margin-top:-70px;
+
+}
+
+#category{
+  margin-top: 7px;
+  color:grey;
+}
+
+#name{
+  color:black;
+}
+
+#box{
+ margin-top: 20px;
+ font-family: Trebuchet MS;
+ font-size: 17px;
+ background-color: #F4F7F9;
+}
+
+
+.box-element{
+	box-shadow:hsl(0, 0%, 80%) 0 0 16px;
+	background-color: #fff;
+	border-radius: 4px;
+	padding: 10px;
+}
+
+hr:last-child {
+display: none;
+}
+
+#coloumn2{
+  position: fixed;
+  margin-left: 58%;
+  margin-top: 10px;
+  /* width:50%; */
+}
+
+#text_form{
+  height:100px;
+  width:50%;
+  /* margin-right: 60%; */
+}
+
+#comment{
+  margin-right: 14%;
+}
+
+#comment_form,#continue{
+  /* margin-left: 14%; */
+  margin-right: 10%;
+}
+
+#profile_pic{
+  width:3%;
+  height:30px;
+}
+
+#name_comment{
+  color:blue;
+  margin-left: 1%;
+}
+
+#input{
+  width:20%;
+}
+
+#comment_content{
+  margin-left: 4%;
+  margin-right: 30%;
+  /* margin-top: 30px; */
+  /* background-color: white; */
+}
+
+#comment_time{
+  margin-left: 4%;
+  font-size: 14px;
+}
+
+#latest_color{
+  color:black;
+  background-color: red
+}
+
+#title_latest{
+  color:black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1500px) {
+  #coloumn2{
+    display:none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #profile_pic{
+    width:10%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .row{
+    margin-left:.2%;
+    margin-right:.2%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #text_form{
+    width:80%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #comment_content,#comment_time{
+    margin-left: 12%;
+  }
+}

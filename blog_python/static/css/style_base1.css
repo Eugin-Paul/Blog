@@ -1,0 +1,126 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    overflow-x: hidden;
+    /* background-color: black; */
+    /* margin: 0 auto; */
+    /* height: 100%; */
+    /* width: 100%; */
+}
+
+#nav{
+    background-color: #F1F4F6;
+}
+
+#list a{
+    padding-right: 80px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: #725C85;
+}
+
+#list a:hover{
+    color:black;
+}
+
+#logo{
+    font-size: 35px;
+    font-family: Courier;
+    color:#53575A;
+    text-shadow: 2px 2px 4px #0C5185;
+    /* color:#43494F; */
+    margin-left: 5%;
+    font-weight: bolder;
+
+}
+
+.logo{
+  height:30px;
+  width:30px;
+}
+
+#search{
+  margin-right:-40px;
+  width : 300px;
+}
+
+#search_button{
+  background-color: lightblue;
+  width : 40px;
+  height : 39px;
+  /* margin-right:100px; */
+}
+
+#account{
+  height:40px;
+  width:40px;
+}
+
+#cart-total{
+  margin-left: -75px;
+  color:white;
+}
+
+#text-line {
+    background-color: transparent;
+    color: black;
+    outline: none;
+    outline-style: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid white 1px;
+    /* padding: 3px 10px; */
+    width:150px;
+    margin-left: -30%;
+}
+
+/* #text-line:click{
+  background-color: red;
+} */
+
+#search_button {
+    background-color: #F1F4F6;
+    /* color:grey; */
+    outline: none;
+    outline-style: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    /* margin-left: 100%; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+    #user_head {
+      margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #search_button {
+      margin-right: 0%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #search {
+      margin-left: 3%;
+    }
+}

@@ -1,0 +1,25 @@
+{% extends "blog/base.html" %}
+
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+{% block title %}{{title}} Blog{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style_blog_create.css' %}" >
+
+<div id = "blog_create" class = "col-md-4 offset-md-3 mt-5">
+  <p class = "pt-5">{{title.upper}} BLOG</p>
+  {{form.media}}
+  <form method = "POST" id="form" enctype = "multipart/form-data">
+    {% csrf_token %}
+    {{form|crispy}}
+
+    <input id="continue" class="btn btn-success mt-4" type="submit" value="PROCEED">
+  </form>
+</div>
+
+
+
+{% endblock %}

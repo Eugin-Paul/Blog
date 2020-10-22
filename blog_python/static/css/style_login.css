@@ -1,0 +1,63 @@
+body{
+    background-color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.inside{
+    height:500px;
+    width:500px;
+    background-color: lightgray;
+    margin-left: 30%;
+    margin-top: 100px;;
+    text-align: center;
+
+}
+
+.user{
+    padding-top: 30px;
+
+}
+
+.login{
+    padding-top: 60px;
+    color:grey;
+}
+
+.pass{
+    padding-top: 20px;
+}
+
+#username,#password{
+    height:40px;
+    width:300px;
+    font-weight: bold;
+    font-size: 17px;
+    font-family: cursive;
+}
+
+#login_button{
+    height:40px;
+    width:150px;
+    margin-top: 30px;
+    background-color: lightblue;
+}
+
+.text_login{
+    color:black;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.new{
+    font-size: 17px;
+}
+
+.register{
+    font-size: 17px;
+    color:green;
+    text-decoration: none;
+}
+
+.new_account{
+    color:red;
+}

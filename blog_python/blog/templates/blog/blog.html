@@ -1,0 +1,112 @@
+{% extends "blog/base.html" %}
+
+{% load static %}
+
+{% block title %}Blog{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style_blog.css' %}" >
+
+
+<div id = "skills" class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <div class="row">
+                <div id = "coloumn1"  class="col-md-9 sm-12 pt-4 ">
+                  <p id = "title" class = "mt-4">{{blog.title.upper}}</p>
+                  <p class = "mt-4">{{blog.overview}}</p>
+
+                  <p class = "mt-4"><a href="{% url 'author_blogs' blog.author.name %}"><img class = "rounded"  id="profile" {% if blog.author.profileURL %} src="{{blog.author.profileURL}}" {% else %} src = "{% static 'images/image.jpg' %}" {% endif %}></a></p>
+                  <div id = "name_category" >
+                    <a href="{% url 'author_blogs' blog.author.name %}"><span id = "name">{{blog.author.name}}</span></a>
+                      {% for cat in blog.categories.all %}
+                    <p id = "category">{{cat}}</p>
+                      {% endfor %}
+                  </div>
+                  <p><img class = "img-fluid"  id="thumb" src="{{blog.thumbURL}}"></p>
+                  <p class = "mt-4">{{blog.content | safe}}</p>
+
+
+
+
+                </div>
+
+
+
+                <div id = "coloumn2" class="col-md-3 sm-12 pt-4">
+                  <div id = "box" class="box-element">
+          					<p id = "latest_details">
+          						SELECTED POSTS
+          						<hr />
+                      {% for blog in random_blogs %}
+          						<div class="row">
+
+          		        <div class = "col-4 mt-2">
+
+          							<div><a href = "{% url 'blogs' blog.id %}"><img class = "img-fluid"  id="thumb" src="{{blog.thumbURL}}"></a></div>
+          		        </div>
+
+          						<div id = "amount" class = "col-8 mt-2">
+          							<div><a href = "{% url 'blogs' blog.id %}"><p id = "title_latest" class = "">{{blog.title}}</p></a></div>
+          						</div>
+
+          				</div>
+                  <hr/>
+                  {% endfor %}
+
+
+          		</div>
+
+
+                  </div>
+                  </div>
+                  </div>
+
+                  <div class="container">
+                    <div class = "row">
+
+                     <div id = "coloumn" class="col-md-12">
+
+
+                  <p id = "comment">Comments({{count}})</p>
+                  <p></p>
+                  <form method = "POST" id="form">
+                    {% csrf_token %}
+                    <div id="comment_form">
+
+                      {% for comment in comments %}
+                      {% if comment.user.author.profile_picture %}
+                      <a href="{% url 'author_blogs' blog.author.name %}"><img class = "rounded"  id="profile_pic" src="{{comment.user.author.profileURL}}"></a><a href="{% url 'author_blogs' blog.author.name %}"><span class = "" id = "name_comment">{{comment.user.username}}</span></a>{% if request.user.is_superuser %}<a href = "{% url 'comment_delete' blog.id comment.id %}" > &nbsp<i class="fa fa-trash text-secondary" aria-hidden="true"></i></a>{% endif %}
+                      {% else %}
+                      <a href="#"><img class = "rounded"  id="profile_pic" src="{% static 'images/image.jpg' %}"></a><a href="#"><span class = "" id = "name_comment">{{comment.user.username}}</span></a>{% if request.user.is_superuser %}<a href = "{% url 'comment_delete' blog.id comment.id %}" > &nbsp<i class="fa fa-trash text-secondary" aria-hidden="true"></i></a>{% endif %}
+                      {% endif %}
+                      <div id = "comment_content"><span id = "test">{{comment.comment_post}}</span></div>
+                      <div id = "comment_time">{{comment.time_view}}</div><br/>
+                      {% endfor %}
+                      <div class="form-field">
+
+                        <!-- <input id = "text_form" required class="form-control" type="text" name="comment" placeholder="Name"> -->
+                        {{form.comment_post}}
+                        </div>
+
+
+                    </div>
+
+
+                    <br >
+
+                    <input id="continue" class="btn btn-primary mt-2" type="submit" value="PROCEED">
+                  </form>
+                  {% if request.user.is_superuser %}
+                  <br/><a href = "{% url 'blog_delete' blog.id %}">Delete Blog</a>
+                  <br/><a href = "{% url 'blog_update' blog.id %}">Update Blog</a>
+                  {% endif %}
+                  </div>
+                  </div>
+                  </div>
+
+            </div>
+            <hr/>
+
+
+
+{% endblock %}
